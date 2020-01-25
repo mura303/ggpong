@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <head>
+      <script src='p5.js'></script>
+        <script src="p5.dom.min.js"></script>
+        <script src="p5.sound.min.js"></script>
+        <script src="p5.play.js"></script>
+    </head>
+<body>
+  <div id='container'></div>
+  <div id='container2'></div>
+  <script>
+
+  let sketch = function(p) {
+      p.testheight = 400;
+      p.testwidth = 800;
+    p.setup = function(){
+        p.createCanvas(p.testwidth, p.testheight);
+
+    }
+    
+    p.draw = function(){
+          // Set the background to black and turn off the fill color
+  p.background(110);
+  p.noFill();
+
+  // The two parameters of the point() method each specify
+  // coordinates.
+  // The first parameter is the x-coordinate and the second is the Y
+  p.stroke(255);
+  p.rect(10, 10, 100, 100 );
+
+    }
+  };
+  new p5(sketch, 'container');
+  new p5(sketch, 'container2');
+  </script>
+    
+    
+</body>
+</html>
+
